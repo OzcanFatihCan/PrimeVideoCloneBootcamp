@@ -37,8 +37,20 @@ class HomePageFragment : Fragment() {
         val movieAdapter=MovieAdapterHorizontal(requireContext(),movieList)
         binding.rvPopular.adapter=movieAdapter
 
-
-        
+        binding.rvSubtitle.layoutManager=StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL)
+        val movieList2=ArrayList<Movie>()
+        val series1=Movie("1","The office","the_office")
+        val series2=Movie("2","Lord of the Rings","lord_of_the_rings")
+        val series3=Movie("3","Chernobyl","chernobyl")
+        val series4=Movie("4","Wheel of Time","wheel_of_time")
+        val series5=Movie("5","The Boys","the_boys")
+        movieList2.add(series1)
+        movieList2.add(series2)
+        movieList2.add(series3)
+        movieList2.add(series4)
+        movieList2.add(series5)
+        val movieAdapter2=MovieAdapterHorizontal2(requireContext(),movieList2)
+        binding.rvSubtitle.adapter=movieAdapter2
 
 
         return binding.root
