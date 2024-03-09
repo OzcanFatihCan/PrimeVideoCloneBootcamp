@@ -116,9 +116,9 @@
 
                    <ImageView
                        android:id="@+id/ivPrimeLogo"
-                       android:layout_width="140dp"
+                       android:layout_width="135dp"
                        android:layout_height="64dp"
-                       android:layout_marginStart="16dp"
+                       android:layout_marginStart="8dp"
                        app:layout_constraintStart_toStartOf="parent"
                        app:layout_constraintTop_toTopOf="parent"
                        app:srcCompat="@drawable/prime_logo" />
@@ -198,6 +198,15 @@
                android:textStyle="bold"
                app:layout_constraintStart_toEndOf="@+id/textViewPrime"
                app:layout_constraintTop_toBottomOf="@+id/rvSubtitle" />
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvOriginal"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="4dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/textViewPrime2" />
 
 
        </androidx.constraintlayout.widget.ConstraintLayout>
