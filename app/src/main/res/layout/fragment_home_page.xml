@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/backgroundColor">
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/cardViewHomePage"
+               android:layout_width="0dp"
+               android:layout_height="120dp"
+               app:cardBackgroundColor="@android:color/transparent"
+               android:minHeight="?attr/actionBarSize"
+               android:theme="?attr/actionBarTheme"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   tools:layout_editor_absoluteX="16dp"
+                   tools:layout_editor_absoluteY="5dp">
+
+
+                   <ImageView
+                       android:id="@+id/ivPersonLogo"
+                       android:layout_width="50dp"
+                       android:layout_height="40dp"
+                       android:layout_gravity="top|end"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginEnd="10dp"
+                       android:src="@drawable/person_avatar"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent">
+
+                   </ImageView>
+
+                   <com.google.android.material.chip.Chip
+                       android:id="@+id/chip1"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="bottom"
+                       android:layout_marginStart="16dp"
+                       android:layout_marginTop="8dp"
+                       android:backgroundTint="@color/buttonColor"
+                       android:text="@string/buttonTümü"
+                       android:textColor="@color/textColor"
+                       android:textSize="16sp"
+                       android:textStyle="bold"
+                       app:chipCornerRadius="15dp"
+                       app:chipStrokeWidth="0dp"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/ivPrimeLogo">
+
+                   </com.google.android.material.chip.Chip>
+
+                   <com.google.android.material.chip.Chip
+                       android:id="@+id/chip2"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="bottom"
+                       android:layout_marginStart="16dp"
+                       android:layout_marginTop="8dp"
+                       android:backgroundTint="@android:color/transparent"
+                       android:text="@string/buttonFilmler"
+                       android:textColor="@color/textColor"
+                       android:textSize="16sp"
+                       android:textStyle="bold"
+                       app:chipCornerRadius="15dp"
+                       app:chipStrokeWidth="0dp"
+                       app:layout_constraintStart_toEndOf="@+id/chip1"
+                       app:layout_constraintTop_toBottomOf="@+id/ivPrimeLogo">
+
+                   </com.google.android.material.chip.Chip>
+
+                   <com.google.android.material.chip.Chip
+                       android:id="@+id/chip3"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="bottom"
+                       android:layout_marginStart="16dp"
+                       android:layout_marginTop="8dp"
+                       android:backgroundTint="@android:color/transparent"
+                       android:text="@string/buttonDizi"
+                       android:textColor="@color/textColor"
+                       android:textSize="16sp"
+                       android:textStyle="bold"
+                       app:chipCornerRadius="15dp"
+                       app:chipStrokeWidth="0dp"
+                       app:layout_constraintStart_toEndOf="@+id/chip2"
+                       app:layout_constraintTop_toBottomOf="@+id/ivPrimeLogo">
+
+                   </com.google.android.material.chip.Chip>
+
+                   <ImageView
+                       android:id="@+id/ivTvSearch"
+                       android:layout_width="50dp"
+                       android:layout_height="40dp"
+                       android:layout_gravity="top|end"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginEnd="8dp"
+                       android:src="@drawable/tv_search_icon"
+                       app:layout_constraintEnd_toStartOf="@+id/ivPersonLogo"
+                       app:layout_constraintTop_toTopOf="parent">
+
+                   </ImageView>
+
+                   <ImageView
+                       android:id="@+id/ivPrimeLogo"
+                       android:layout_width="140dp"
+                       android:layout_height="64dp"
+                       android:layout_marginStart="16dp"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:srcCompat="@drawable/prime_logo" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvPopular"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="8dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/cardViewHomePage" />
+
+           <TextView
+               android:id="@+id/textViewPrime"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="16dp"
+               android:text="@string/textPrime"
+               android:textColor="@color/textColor2"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/rvPopular" />
+
+           <TextView
+               android:id="@+id/textViewInfo1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="4dp"
+               android:layout_marginTop="16dp"
+               android:text="@string/textInfo1"
+               android:textColor="@color/textColor3"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               app:layout_constraintStart_toEndOf="@+id/textViewPrime"
+               app:layout_constraintTop_toBottomOf="@+id/rvPopular" />
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvSubtitle"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="4dp"
+               android:layout_marginEnd="16dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/textViewPrime" />
+
+           <TextView
+               android:id="@+id/textViewPrime2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="16dp"
+               android:text="@string/textPrime"
+               android:textColor="@color/textColor2"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/rvSubtitle" />
+
+           <TextView
+               android:id="@+id/textViewInfo2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="4dp"
+               android:layout_marginTop="16dp"
+               android:text="@string/textInfo2"
+               android:textColor="@color/textColor3"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               app:layout_constraintStart_toEndOf="@+id/textViewPrime"
+               app:layout_constraintTop_toBottomOf="@+id/rvSubtitle" />
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </ScrollView>

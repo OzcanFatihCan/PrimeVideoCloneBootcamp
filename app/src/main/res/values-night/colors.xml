@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="bottomNavColor">#FF000000</color>
+    <color name="backgroundColor">#00040d</color>
+    <color name="textColor">#FFb2b4b3</color>
+    <color name="textColor2">#FF1691f8</color>
+    <color name="textColor3">#FFFFFFFF</color>
+    <color name="buttonColor">#FF1b1b1b</color>
+</resources>

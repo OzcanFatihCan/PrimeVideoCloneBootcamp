@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PrimeVideoClone</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="buttonTümü">Tümü</string>
+    <string name="buttonFilmler">Filmler</string>
+    <string name="buttonDizi">Tv Dizileri</string>
+    <string name="textPrime">Prime</string>
+    <string name="textInfo1">- Seslendirmeli TV dizileri ve filmler > </string>
+    <string name="textInfo2">- Amazon Orijinal ve Özel İçerikler > </string>
+    <string name="textInfo3">- Alt yazılı TV dizileri ve filmler > </string>
+</resources>
