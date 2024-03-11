@@ -7,17 +7,145 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewHomePage"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:cardBackgroundColor="#4D00040d"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="5dp">
+
+
+            <ImageView
+                android:id="@+id/ivPersonLogo"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/person_avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/buttonColor"
+                android:text="@string/buttonTümü"
+                android:textColor="@color/textColor3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:chipCornerRadius="15dp"
+                app:chipStrokeWidth="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivPrimeLogo">
+
+            </com.google.android.material.chip.Chip>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@android:color/transparent"
+                android:text="@string/buttonFilmler"
+                android:textColor="@color/textColor3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:chipCornerRadius="15dp"
+                app:chipStrokeWidth="0dp"
+                app:layout_constraintStart_toEndOf="@+id/chip1"
+                app:layout_constraintTop_toBottomOf="@+id/ivPrimeLogo">
+
+            </com.google.android.material.chip.Chip>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@android:color/transparent"
+                android:text="@string/buttonDizi"
+                android:textColor="@color/textColor3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:chipCornerRadius="15dp"
+                app:chipStrokeWidth="0dp"
+                app:layout_constraintStart_toEndOf="@+id/chip2"
+                app:layout_constraintTop_toBottomOf="@+id/ivPrimeLogo">
+
+            </com.google.android.material.chip.Chip>
+
+            <ImageView
+                android:id="@+id/ivTvSearch"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/tv_search_icon"
+                app:layout_constraintEnd_toStartOf="@+id/ivPersonLogo"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/ivPrimeLogo"
+                android:layout_width="135dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/prime_logo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintTop_toTopOf="@+id/cardViewHomePage"
         app:navGraph="@navigation/main_activity_nav" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="@color/bottomNavColor"
+        app:itemIconTint="@color/bottomIconColor"
+        app:itemTextColor="@color/bottomIconColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navbar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

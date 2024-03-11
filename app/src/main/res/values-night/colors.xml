@@ -9,4 +9,5 @@
     <color name="textColor2">#FF1691f8</color>
     <color name="textColor3">#FFFFFFFF</color>
     <color name="buttonColor">#FF1b1b1b</color>
+    <color name="bottomIconColor">#FFFFFF</color>
 </resources>
