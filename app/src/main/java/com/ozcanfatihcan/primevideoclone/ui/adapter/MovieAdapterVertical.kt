@@ -3,7 +3,9 @@ package com.ozcanfatihcan.primevideoclone.ui.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.ozcanfatihcan.primevideoclone.R
 import com.ozcanfatihcan.primevideoclone.data.entity.Movie
 import com.ozcanfatihcan.primevideoclone.databinding.CardVerticalDesignBinding
 
@@ -12,7 +14,7 @@ class MovieAdapterVertical(var mContext: Context, var movieList: List<Movie>):Re
     inner class CardDesignHolder(var design: CardVerticalDesignBinding): RecyclerView.ViewHolder(design.root){}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardDesignHolder {
-        val design= CardVerticalDesignBinding.inflate(LayoutInflater.from(mContext),parent,false)
+        val design:CardVerticalDesignBinding= DataBindingUtil.inflate(LayoutInflater.from(mContext),R.layout.card_vertical_design,parent,false)
         return CardDesignHolder(design)
     }
 

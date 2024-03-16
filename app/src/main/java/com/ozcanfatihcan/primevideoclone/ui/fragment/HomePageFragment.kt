@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.ozcanfatihcan.primevideoclone.R
 import com.ozcanfatihcan.primevideoclone.data.entity.Movie
 import com.ozcanfatihcan.primevideoclone.databinding.FragmentHomePageBinding
 import com.ozcanfatihcan.primevideoclone.ui.adapter.MovieAdapterHorizontal
@@ -19,9 +23,8 @@ class HomePageFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding=FragmentHomePageBinding.inflate(inflater,container,false)
-
-        binding.rvPopular.layoutManager=StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL)
+        binding=DataBindingUtil.inflate(inflater,R.layout.fragment_home_page,container,false)
+        binding.homeFragmentObject=this
 
         val movieList=ArrayList<Movie>()
         val movie1=Movie("1","Succession","succession")
@@ -36,9 +39,9 @@ class HomePageFragment : Fragment() {
         movieList.add(movie5)
 
         val movieAdapter=MovieAdapterHorizontal(requireContext(),movieList)
-        binding.rvPopular.adapter=movieAdapter
+        binding.movieAdapterHorizontal=movieAdapter
 
-        binding.rvSubtitle.layoutManager=StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL)
+
         val movieList2=ArrayList<Movie>()
         val series1=Movie("6","The office","the_office")
         val series2=Movie("7","Lord of the Rings","lord_of_the_rings")
@@ -51,9 +54,9 @@ class HomePageFragment : Fragment() {
         movieList2.add(series4)
         movieList2.add(series5)
         val movieAdapter2=MovieAdapterHorizontal2(requireContext(),movieList2)
-        binding.rvSubtitle.adapter=movieAdapter2
+        binding.movieAdapterHorizontal2=movieAdapter2
 
-        binding.rvOriginal.layoutManager=StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL)
+
         val movieList3=ArrayList<Movie>()
         val vertSeries1=Movie("11","Best Hospital of Galaxy","best_hospital_of_galaxy")
         val vertSeries2=Movie("12","Lord of the Rings","lord_of_rings_vertical")
@@ -66,7 +69,7 @@ class HomePageFragment : Fragment() {
         movieList3.add(vertSeries4)
         movieList3.add(vertSeries5)
         val movieAdapter3=MovieAdapterVertical(requireContext(),movieList3)
-        binding.rvOriginal.adapter=movieAdapter3
+        binding.movideAdapterVertical=movieAdapter3
 
 
 
