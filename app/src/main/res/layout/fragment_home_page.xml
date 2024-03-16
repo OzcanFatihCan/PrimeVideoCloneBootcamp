@@ -16,7 +16,7 @@
             name="movieAdapterHorizontal2"
             type="com.ozcanfatihcan.primevideoclone.ui.adapter.MovieAdapterHorizontal2" />
         <variable
-            name="movideAdapterVertical"
+            name="movieAdapterVertical"
             type="com.ozcanfatihcan.primevideoclone.ui.adapter.MovieAdapterVertical" />
     </data>
 
@@ -33,15 +33,15 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvPopular"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="128dp"
                 android:adapter="@{movieAdapterHorizontal}"
-                app:spanCount="1"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-                android:layout_height="match_parent"
-                android:layout_marginTop="128dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:spanCount="1" />
 
             <TextView
                 android:id="@+id/textViewPrime"
@@ -73,16 +73,16 @@
                 android:id="@+id/rvSubtitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:adapter="@{movieAdapterHorizontal2}"
-                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-                app:spanCount="1"
-                android:orientation="horizontal"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="16dp"
+                android:adapter="@{movieAdapterHorizontal2}"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewPrime" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewPrime"
+                app:spanCount="1" />
 
             <TextView
                 android:id="@+id/textViewPrime2"
@@ -114,14 +114,14 @@
                 android:id="@+id/rvOriginal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:adapter="@{movideAdapterVertical}"
-                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-                app:spanCount="1"
-                android:orientation="horizontal"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
+                android:adapter="@{movieAdapterVertical}"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewPrime2" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewPrime2"
+                app:spanCount="1" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
